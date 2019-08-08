@@ -6,10 +6,9 @@ using UnityEngine.UI;
 public class food : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float foodspeed;
     public float endtime;
-    public Text text_Timer;
-    public Text text_Score;
+    Text text_Timer;    
+    Text text_Score;  
     GameObject cooker;
 
     private float playtime;
@@ -53,7 +52,8 @@ public class food : MonoBehaviour
         playtime = 0.0f;
         score = 0;
         pressed = 0.0f;
-
+        text_Timer = GameObject.Find("Canvas/Panel/Time").GetComponent<Text>();
+        text_Score = GameObject.Find("Canvas/Panel/Score").GetComponent<Text>();
         for (int i = 0; i < 12; i++)
         {
             audio[i] = this.gameObject.AddComponent<AudioSource>();
@@ -163,7 +163,6 @@ public class food : MonoBehaviour
         int food_num = Random.Range(0, 3);
         int human_num = Random.Range(0, 3);
 
-        if(human_num>)
 
         if (flag == 2 || flag == 4)
         {
